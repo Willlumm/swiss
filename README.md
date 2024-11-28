@@ -50,9 +50,16 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/brocco
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
+### Install Jekyll
+https://jekyllrb.com/docs/installation/windows/
+1. Download `Ruby+Devkit` from https://rubyinstaller.org/downloads/ and install.
+1. Run `ridk install` on last step of installation and select `MSYS2 and MINGW development toolchain`.
+1. Run `gem install jekyll bundler`.
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+### Build Site Locally
+https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
+1. Run `bundle install`.
+1. Run `bundle exec jekyll serve`.
 
 When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
