@@ -31,6 +31,10 @@ https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/test
 
 When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
+### Tools
+- [Liquid Docs](https://jekyllrb.com/docs/liquid/)
+- [SVG Path Editor](https://yqnn.github.io/svg-path-editor/)
+
 ## License
 
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
