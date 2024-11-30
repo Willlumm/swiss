@@ -8,7 +8,9 @@ Forked from https://github.com/broccolini/swiss
 
 ### Changes from Original
 - Added green theme.
-
+- Added LinkedIn social.
+- Allowed multiple socials.
+- Tweaked homepage style.
 
 ## Installation
 

@@ -19,7 +19,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Optional social link, you can choose from the following options:
-# twitter (default), instagram, medium, or dribbble
+# dribbble, github, instagram, linkedin, medium, or twitter
 socials:
   - link: github
     username: jekyll
@@ -27,7 +27,7 @@ socials:
     username: jekyllrb
 
 # Set theme color here
-# Choose from: black (default), blue, gray, magenta, orange, red, white, and yellow.
+# Choose from: black (default), blue, gray, green, magenta, orange, red, white, and yellow.
 theme_color: black
 
 # Build settings
