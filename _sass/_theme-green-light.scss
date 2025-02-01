@@ -2,19 +2,18 @@
 
 // Color variables
 $black: #181818;
-$green: #618b4a;
-$green-dark: #60935D;
+$green: #60935D;
 $white: #fff;
 
 // Config
 $color-background: $white !default;
-$color-dot-accent: $green-dark !default;
+$color-dot-accent: $green !default;
 $color-foreground: $black !default;
 $color-title: $black !default;
 $color-body-text: $black !default;
-$color-text-accent: $green-dark !default;
-$color-code: $green-dark !default;
-$color-nav-link: $white !default;
+$color-text-accent: $green !default;
+$color-code: $green !default;
+$color-nav-link: $green !default;
 $color-primary-link: $green !default;
 
 // Import sass partials (used in all themes)
