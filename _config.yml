@@ -28,7 +28,7 @@ socials:
 
 # Set theme color here
 # Choose from: black (default), blue, gray, green, magenta, orange, red, white, and yellow.
-theme_color: green-dark
+theme_color: asparagus
 
 # Build settings
 markdown: kramdown
