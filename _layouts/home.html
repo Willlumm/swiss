@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 {% include head.html %}
 
 <body>
-
   <div>
-
     <header class="header-background">
-
       <div class="clearfix border-bottom-thick header-border">
         <ul class="list-reset right py-1 header-text font-smoothing">
           {% for my_page in site.pages %}
@@ -22,38 +18,37 @@
           {% endfor %}
         </ul>
       </div>
-
-      <div class="container mx-auto px-2 mb-2 clearfix header-text table">
-        <h1 class="h0 inline-block col-9 sm-width-full py-4 mt-3 header-title">
-          {{ site.title }}
-        </h1>
-        <div class="clearfix mb-4 py-1">
-          <div class="col-9 sm-width-full left">
-            <div class="prose py-1">
+      <div class="flex container gap-1 mx-auto header-text">
+        <section class="grid grid-cols-1 lg:grid-cols-2-1 gap-2 items-center">
+          <div class="flex flex-col gap-2">
+            <h1 class="h0 header-title">
+              {{ site.title }}
+            </h1>
+            <div class="prose">
               {{ content }}
             </div>
             <div class="table">
               {% for i in (1..3) %}
-              <div class="inline-block mt-3 mr-1">
+              <div class="inline-block mr-1">
                 {% include dot-accent.html %}
               </div>
               {% endfor %}
               {% for social in site.socials %}
-              <div class="inline-block mt-3 mr-1">
+              <div class="inline-block mr-1">
                 {% include {{ social.link }}.html username=social.username %}
               </div>
               {% endfor %}
             </div>
           </div>
-        </div>
+          <picture class="order-first lg:order-1">
+            <img src="{{ site.homepage_image }}" alt="{{ site.homepage_image_alt }}"
+              style="width: 100%; object-fit: contain;">
+          </picture>
+        </section>
       </div>
-
     </header>
-
   </div>
-
   {% include footer.html %}
-
 </body>
 
 </html>
