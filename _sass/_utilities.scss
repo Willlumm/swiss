@@ -70,13 +70,31 @@
 
 .block        { display: block !important; }
 .inline-block { display: inline-block !important; }
-
+.grid {
+  display: grid
+}
+.grid-cols-1 {
+  grid-template-columns: minmax(0, 1fr)
+}
+.grid-cols-1-1 {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+.grid-cols-2-1 {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr)
+}
+.flex         { display: flex; }
+.flex-col     { flex-direction: column; }
+.gap-1        { gap: $spacer-1; }
 .table { display: table !important; }
+
+.order-first {
+  order: -9999
+}
 
 .left { float: left; }
 .right { float: right; }
 
-.center-vertically { 
+.center-vertical { 
   margin: 0;
   position: absolute;
   top: 50%;
@@ -92,6 +110,9 @@
 .clearfix:after { clear: both }
 
 .align-middle { vertical-align: middle; }
+.items-center {
+  align-items: center;
+}
 
 /* Padding */
 .px-0 { padding-left: 0; padding-right:  0 }

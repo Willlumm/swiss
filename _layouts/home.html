@@ -23,37 +23,37 @@
         </ul>
       </div>
 
-      <div class="container mx-auto px-2 mb-2 clearfix header-text table">
-        <div class="inline-block col-8 mt-3">
-          <h1 class="h0 inline-block sm-width-full py-4 mt-3 header-title">
-            {{ site.title }}
-          </h1>
-
-          <div class="clearfix mb-4 py-1">
-            <div class="sm-width-full left">
-              <div class="prose py-1">
-                {{ content }}
-              </div>
-              <div class="table">
-                {% for i in (1..3) %}
-                <div class="inline-block mt-3 mr-1">
-                  {% include dot-accent.html %}
+      <div class="flex container gap-1 mx-auto px-2 mb-2 clearfix header-text table" style="position: relative;">
+        <section class="grid grid-cols-2-1 items-center">
+          <div class="flex flex-col">
+            <h1 class="h0 inline-block sm-width-full py-4 mt-3 header-title">
+              {{ site.title }}
+            </h1>
+  
+            <div class="clearfix mb-4 py-1">
+              <div class="sm-width-full left">
+                <div class="prose py-1">
+                  {{ content }}
                 </div>
-                {% endfor %}
-                {% for social in site.socials %}
-                <div class="inline-block mt-3 mr-1">
-                  {% include {{ social.link }}.html username=social.username %}
+                <div class="table">
+                  {% for i in (1..3) %}
+                  <div class="inline-block mt-3 mr-1">
+                    {% include dot-accent.html %}
+                  </div>
+                  {% endfor %}
+                  {% for social in site.socials %}
+                  <div class="inline-block mt-3 mr-1">
+                    {% include {{ social.link }}.html username=social.username %}
+                  </div>
+                  {% endfor %}
                 </div>
-                {% endfor %}
               </div>
             </div>
           </div>
-        </div>
-        <div class="inline-block col-4">
-          <div class="inline-block sm-width-full center-vertically">
+          <picture>
             <img src="{{ site.homepage_image }}" alt="{{ site.homepage_image_alt }}" style="width: 100%; object-fit: contain;">
-          </div>
-        </div>
+          </picture>
+        </section>
       </div>
 
     </header>
