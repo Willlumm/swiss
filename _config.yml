@@ -16,7 +16,8 @@
 title: Swiss Theme
 description: A bold typographic theme inspired by Swiss design.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.
+source_url: https://github.com/Willlumm/swiss
 
 homepage_image: https://jekyllrb.com/img/logo-2x.png
 homepage_image_alt: Jekyll logo
