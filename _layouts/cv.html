@@ -2,8 +2,6 @@
 layout: default
 ---
 <article class="container mx-auto px-2 mt2 mb4">
-  <div class="col-4 sm-width-full border-top-thin">
-  </div>
   <div class="mb-4 py-4">
     {% for category in site.data.cv %}
     <h2 class="center-text">{{ category.name }}</h2>
@@ -22,6 +20,6 @@ layout: default
       </div>
       {% endfor %}
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </article>
