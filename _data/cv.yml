@@ -5,6 +5,7 @@
       dates: March 2005 - May 2013
       image: asda.png
       color: 6dba46
+      text-color: light
       description: |
         - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         - Phasellus semper id lacus sodales luctus.
@@ -18,3 +19,4 @@
       description: Bananatastic!
       image: asda.png
       color: 6dba46
+      text-color: dark

@@ -9,7 +9,7 @@ layout: default
     <h2 class="center-text">{{ category.name }}</h2>
     <div class="card-container">
       {% for item in category.items %}
-      <div class="card" style="background-color: #{{ item.color }};">
+      <div class="card {{ item.text-color }}" style="background-color: #{{ item.color }};">
         <div>
           <img src="../assets/logos/{{ item.image }}">
         </div>
