@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="container mx-auto px-2 mt2 mb4">
+  <div class="col-4 sm-width-full border-top-thin">
+  </div>
+  <div class="prose mb-4 py-4">
+    {% for category in site.cv %}
+
+    <div>
+      <h2>{{ category.name }}</h2>
+      {% for item in category.items %}
+      <div>
+        <div>
+          <img src="../assets/logos/{{ item.image }}">
+        </div>
+        <div>
+          <p>{{ item.title }}</p>
+          <p>{{ item.company }}</p>
+          <p>{{ item.dates }}</p>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</article>

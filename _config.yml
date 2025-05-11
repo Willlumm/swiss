@@ -36,3 +36,12 @@ theme_color: asparagus
 
 # Build settings
 markdown: kramdown
+
+cv:
+  - name: Employment
+    items:
+      - title: Data Engineer
+        company: Asda
+        dates: November 2023 - present
+        description: Stuff
+        image: asda.png
