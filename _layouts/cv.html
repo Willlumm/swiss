@@ -10,15 +10,15 @@ layout: default
     <div>
       <h2>{{ category.name }}</h2>
       {% for item in category.items %}
-      <div>
+      <div class="card" style="background-color: #{{ item.color }};">
         <div>
           <img src="../assets/logos/{{ item.image }}">
         </div>
-        <div>
-          <p>{{ item.title }}</p>
-          <p>{{ item.company }}</p>
-          <p>{{ item.dates }}</p>
-          <p>{{ item.description }}</p>
+        <div class="info">
+          <p class="title">{{ item.title }}</p>
+          <p class="location">{{ item.company }}</p>
+          <p class="dates">{{ item.dates }}</p>
+          <p class="description">{{ item.description }}</p>
         </div>
       </div>
       {% endfor %}
