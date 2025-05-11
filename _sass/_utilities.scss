@@ -208,3 +208,21 @@
     text-decoration: none !important;
   }
 }
+
+.center-text {text-align: center; }
+
+.card-container { display: grid; grid-template-columns: repeat(2, 1fr); }
+
+@media only screen and (max-width: $breakpoint-lg) { .card-container { grid-template-columns: 1fr; } }
+
+.card { align-items: center; margin: 20px 30px; background-color: white; border-radius: .375rem; padding: 1.5em; font-size: 1.2em; display: grid; grid-template-columns: 90px auto; grid-column-gap: 20px; }
+
+.info p { margin-top: 5px; margin: 0px; text-align: left; }
+
+.info .title { font-size: $body-font-size; font-weight: 900; }
+
+.info .location { font-size: small; font-weight: 400; }
+
+.info .description { font-size: small; font-weight: 400; white-space: pre-wrap; }
+
+.info .dates { font-size: small; }

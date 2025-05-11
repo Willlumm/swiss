@@ -1,0 +1,20 @@
+- name: Employment
+  items:
+    - title: Assistant Regional Manager
+      company: Dunder Mifflin
+      dates: March 2005 - May 2013
+      image: asda.png
+      color: 6dba46
+      description: |
+        - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        - Phasellus semper id lacus sodales luctus.
+        - Donec in est in dui luctus sodales eu ornare dolor.
+        - Curabitur congue turpis sollicitudin, ultricies sem a, maximus ligula.
+        - Donec ornare iaculis purus in vestibulum.
+
+    - title: Banana Taster
+      company: Banana Republic
+      dates: November 2023 - present
+      description: Bananatastic!
+      image: asda.png
+      color: 6dba46
