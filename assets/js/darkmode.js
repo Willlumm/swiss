@@ -1,24 +1,17 @@
 const SUN = "M15 4a8 8 0 100 8 8 8 0 000-8";
 const MOON = "M15 4a8 8 0 100 8 5 5 0 110-8";
-const DARKMODE_ICON = document.getElementById("darkmode-icon");
+const BUTTON = document.getElementById("darkmode-button");
+const ICON = document.getElementById("darkmode-icon");
 const USING_DARKMODE = localStorage.getItem("dark-mode");
-const PREFERS_LIGHT = window.matchMedia("(prefers-color-scheme: light)").matches;
-const PREFERS_DARK = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-let darkMode = true;
-if (USING_DARKMODE === "true") {
-    darkMode = true;
-} else if (USING_DARKMODE === "false") {
-    darkMode = false;
-} else if (PREFERS_DARK) {
-    darkMode = true;
-} else if (PREFERS_LIGHT) {
-    darkMode = false;
+function setDark() {
+    ICON.setAttribute("d", SUN);
+    BUTTON.setAttribute("title", "Light mode")
 }
 
-if (darkMode) {
-    document.body.classList.add("dark-mode");
-    DARKMODE_ICON.setAttribute("d", SUN);
+function setLight() {
+    ICON.setAttribute("d", MOON);
+    BUTTON.setAttribute("title", "Dark mode")
 }
 
 function toggleDarkMode() {
@@ -26,8 +19,24 @@ function toggleDarkMode() {
     localStorage.setItem("dark-mode", darkMode);
     document.body.classList.toggle("dark-mode");
     if (darkMode) {
-        DARKMODE_ICON.setAttribute("d", SUN);
+        setDark();
     } else {
-        DARKMODE_ICON.setAttribute("d", MOON);
+        setLight();
     }
+}
+
+let darkMode = false;
+if (USING_DARKMODE === "true") {
+    darkMode = true;
+} else if (USING_DARKMODE === "false") {
+    darkMode = false;
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    darkMode = true;
+}
+
+if (darkMode) {
+    document.body.classList.add("dark-mode");
+    setDark();
+} else {
+    setLight();
 }

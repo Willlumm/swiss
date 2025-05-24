@@ -6,9 +6,9 @@
   </div>
   <div class="right sm-width-full">
     <ul class="list-reset mt-lg-1 mb-2 mb-lg-1">
-      <button class="dark-mode-button mr-2" onclick="toggleDarkMode()">
+      <button id="darkmode-button" class="dark-mode-button mr-2" onclick="toggleDarkMode()">
         <svg height="16" width="16" version="1.1" viewBox="0 0 16 16" >
-          <path id="darkmode-icon" d="M15 4a8 8 0 100 8 5 5 0 110-8"/>
+          <path id="darkmode-icon"/>
         </svg>
       </button>
       {% for my_page in site.pages %}
