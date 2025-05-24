@@ -56,16 +56,27 @@
   {% include footer.html %}
 </body>
 <script>
-  const LIGHTMODE = "M15 4a8 8 0 100 8 8 8 0 000-8"
-  const DARKMODE = "M15 4a8 8 0 100 8 5 5 0 110-8"
+  const SUN = "M15 4a8 8 0 100 8 8 8 0 000-8";
+  const MOON = "M15 4a8 8 0 100 8 5 5 0 110-8";
+  const DARKMODE_ICON = document.getElementById("darkmode-icon");
+
+  let darkMode = 
+    localStorage.getItem("dark-mode") == "true"
+    ?? window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
+  if (darkMode) {
+    document.body.classList.add("dark-mode");
+    DARKMODE_ICON.setAttribute("d", SUN);
+  }
+
   function toggleDarkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-    svg_path = document.getElementById("darkmode-icon");
-    if (svg_path.getAttribute("d") == LIGHTMODE) {
-      svg_path.setAttribute("d", DARKMODE);
+    darkMode = !darkMode;
+    localStorage.setItem("dark-mode", darkMode);
+    document.body.classList.toggle("dark-mode");
+    if (darkMode) {
+      DARKMODE_ICON.setAttribute("d", SUN);
     } else {
-      svg_path.setAttribute("d", LIGHTMODE);
+      DARKMODE_ICON.setAttribute("d", MOON);
     }
   }
 </script>
