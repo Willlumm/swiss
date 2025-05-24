@@ -7,11 +7,13 @@
     <header class="header-background">
       <div class="clearfix border-bottom-thick header-border">
         <ul class="list-reset right py-1 header-text font-smoothing">
-          <button id="darkmode-button" class="dark-mode-button mr-2" onclick="toggleDarkMode()">
-            <svg height="16" width="16" version="1.1" viewBox="0 0 16 16" >
-              <path id="darkmode-icon"/>
-            </svg>
-          </button>
+          <li class="inline-block">
+            <button id="darkmode-button" class="dark-mode-button align-middle mr-2" onclick="toggleDarkMode()">
+              <svg height="16" width="16" version="1.1" viewBox="0 0 16 16" >
+                <path id="darkmode-icon"/>
+              </svg>
+            </button>
+          </li>
           {% for my_page in site.pages %}
           {% if my_page.title %}
           <li class="inline-block">
