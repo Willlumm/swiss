@@ -6,15 +6,22 @@ $green: #7BA05B;
 $white: #ECF1E7;
 
 // Config
-$color-background: $black !default;
+$color-background: $white !default;
+$color-header-background: $white !default;
 $color-dot-accent: $green !default;
-$color-foreground: $white !default;
+$color-foreground: $black !default;
 $color-title: $green !default;
-$color-body-text: $white !default;
+$color-body-text: $black !default;
 $color-text-accent: $green !default;
 $color-code: $green !default;
 $color-nav-link: $green !default;
 $color-primary-link: $green !default;
+
+// Dark mode
+$color-background-darkmode: $black !default;
+$color-header-background: $black !default;
+$color-foreground-darkmode: $white !default;
+$color-body-text-darkmode: $white !default;
 
 // Import sass partials (used in all themes)
 @import
