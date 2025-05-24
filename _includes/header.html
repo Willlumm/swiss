@@ -27,11 +27,15 @@
   const SUN = "M15 4a8 8 0 100 8 8 8 0 000-8";
   const MOON = "M15 4a8 8 0 100 8 5 5 0 110-8";
   const DARKMODE_ICON = document.getElementById("darkmode-icon");
-
-  let darkMode = 
-    localStorage.getItem("dark-mode") == "true"
-    ?? window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const USING_DARKMODE = localStorage.getItem("dark-mode");
   
+  let darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (USING_DARKMODE === "true") {
+    darkMode = true;
+  } else if (USING_DARKMODE === "false") {
+    darkMode = false;
+  }
+
   if (darkMode) {
     document.body.classList.add("dark-mode");
     DARKMODE_ICON.setAttribute("d", SUN);
